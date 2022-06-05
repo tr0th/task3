@@ -1,0 +1,10 @@
+<h1>Date spliter</h1>
+<p>Date before split: [% before %]</p>
+<p>Date after splitting: </p>
+[% FOREACH item IN date %]
+    [% IF (item.match('\d{4}-\d{2}-\d{2}')) %]
+        <p>Date: [% item %]</p>
+    [% ELSE %]
+        <p>Time: [% item %]</p>
+    [% END %]
+[% END %]
